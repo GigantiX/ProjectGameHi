@@ -167,7 +167,7 @@ class LoginAdminViewController: UIViewController, UIImagePickerControllerDelegat
     //v Logout Func
     @IBAction func onAdminLogout(_ sender: Any) {
         
-        let alertController = UIAlertController(title: "Logout", message: "Are you sure?", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Logout", message: "Are you sure want to logout?", preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "Logout", style: .default) { (action) in
             self.toLoginPage()

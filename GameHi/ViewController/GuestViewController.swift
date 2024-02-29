@@ -46,6 +46,7 @@ class GuestViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         GameTableView.dataSource = self
         GameTableView.delegate = self
@@ -121,7 +122,7 @@ class GuestViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     @IBAction func onCheckout(_ sender: Any) {
         if let nextView = storyboard?.instantiateViewController(identifier: "paymentView"){
-            var paymentPG = nextView as! PaymentViewController
+            let paymentPG = nextView as! PaymentViewController
             paymentPG.totalRecived = String(total)
             
             navigationController?.pushViewController(nextView, animated: true)
